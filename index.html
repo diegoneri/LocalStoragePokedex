@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - 2020-2</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Bitter|Ubuntu+Mono' rel='stylesheet'
+    type='text/css'>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+
+        form {
+            display: flex;
+            flex-flow: column;
+            max-width: 400px;
+        }
+
+        form > * {
+            padding: 10px;
+        }
+
+        #foto-pokemon {
+            max-height: 75vh;
+        }
+
+        #nome-pokemon {
+            font-size: 1.5em;
+            font-variant: small-caps;
+        }
+        input{
+            margin: .4rem;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/250px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokémon">
+    <img id="foto-pokemon" src="" alt="Imagem do pokemón">
+    <div>
+        <p id="nome-pokemon"></p>
+    </div>
+    <div id="pref-usuario" hidden="true">
+        <form id="frmPreferencias">
+            <fieldset>
+                <legend>Preferências do usuário</legend>
+                <div>
+                    <label for="bgcolor">Selecione a cor de fundo:</label>
+                    <input type="text" id="bgColor" value="red" />
+                </div>
+                <div>
+                    <label for="fontcolor">Selecione a cor da fonte:</label>
+                    <input type="text" id="fontColor" value="black" />
+                </div>
+                <div>
+                    <label for="fontStyle">Selecione uma fonte:</label>
+                    <select id="fontStyle">
+                        <option value="'Open Sans Condensed', sans-serif" selected>Sans-serif</option>
+                        <option value="'Bitter', serif">Serif</option>
+                        <option value="'Ubuntu Mono'">Monospace</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Salvar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
